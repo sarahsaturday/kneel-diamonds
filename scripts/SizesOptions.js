@@ -1,4 +1,4 @@
-import { setSize } from "./TransientState.js";
+import { setSizeId } from "./TransientState.js";
 
 export const SizeOptions = async () => {
     const response = await fetch("http://localhost:8088/sizes");
@@ -6,7 +6,7 @@ export const SizeOptions = async () => {
 
     let sizeOptionsHTMLArray = sizes.map((size) => `
       <div class="size-option">
-        <input type="radio" name="size" value="${size.carets}">
+        <input type="radio" name="size-id" value="${size.id}">
         <label>${size.carets}</label>
       </div>
     `);
@@ -17,8 +17,8 @@ export const SizeOptions = async () => {
   `;
 
   const handleSizeChoice = (event) => {
-    if (event.target.name === "size") {
-        setSize(event.target.value);
+    if (event.target.name === "size-id") {
+        setSizeId(event.target.value);
     }
 };
 

@@ -1,0 +1,89 @@
+/* Global styling */
+
+body {
+    font-family: 'Arial', sans-serif;
+  }
+  
+  body {
+    margin: 20px;
+  }
+  
+  p {
+    margin-bottom: 10px;
+  }
+  
+  h1,
+  h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  
+  article {
+    margin-bottom: 20px;
+  }
+  
+
+/* Set up the main container */
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  /* Style the choices section */
+  .choices {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  /* Style each individual options section */
+  .options {
+    flex: 1;
+    border: 1px solid #ccc;
+    padding: 10px;
+    justify-content: space-evenly;
+    border-radius: 10px;
+    background-color: rgb(221, 224, 228);
+    padding: 1rem;
+    margin: 0.5rem;
+    font-size: smaller;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    width: 150px;
+  }
+  
+ /* Style the custom orders section */
+ .custom-orders {
+    margin-top: 20px;
+    text-align: left;
+  }
+  
+  .custom-orders .order-item {
+    margin-bottom: 8px;
+    position: relative;
+  }
+  
+  /* Style the order button */
+  .order {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .order button {
+    padding: 10px 20px;
+    background-color: mediumorchid;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+  }
+  
+  .order button:hover {
+    background-color: navy;
+    cursor: pointer;
+  }
+  

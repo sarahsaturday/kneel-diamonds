@@ -72,40 +72,52 @@
   ],
   "orders": [
     {
-      "metalType": "Sterling Silver",
-      "size": "1",
-      "styleType": "Vintage",
+      "metalId": 1,
+      "sizeId": 2,
+      "styleId": 2,
       "id": 1
     },
     {
-      "metalType": "24K Gold",
-      "size": "1",
-      "styleType": "Modern",
+      "metalId": 3,
+      "sizeId": 3,
+      "styleId": 3,
       "id": 2
     },
     {
-      "metalType": "14K Gold",
-      "size": "2",
-      "styleType": "Vintage",
+      "metalId": 2,
+      "sizeId": 1,
+      "styleId": 3,
       "id": 3
     },
     {
-      "metalType": "14K Gold",
-      "size": "2",
-      "styleType": "Vintage",
+      "metalId": 1,
+      "sizeId": 3,
+      "styleId": 3,
       "id": 4
     },
     {
-      "metalType": "Platinum",
-      "size": "2",
-      "styleType": "Vintage",
+      "metalId": 3,
+      "sizeId": 3,
+      "styleId": 3,
       "id": 5
     },
     {
-      "metalType": "24K Gold",
-      "size": "0.5",
-      "styleType": "Modern",
+      "metalId": 2,
+      "sizeId": 2,
+      "styleId": 1,
       "id": 6
+    },
+    {
+      "metalId": 5,
+      "sizeId": 4,
+      "styleId": 3,
+      "id": 7
+    },
+    {
+      "metalId": 3,
+      "sizeId": 4,
+      "styleId": 3,
+      "id": 8
     }
   ]
 }

@@ -1,4 +1,4 @@
-import { setStyleType } from "./TransientState.js"
+import { setStyleId } from "./TransientState.js"
 
 export const StyleOptions = async () => {
     const response = await fetch("http://localhost:8088/styles");
@@ -6,7 +6,7 @@ export const StyleOptions = async () => {
 
     let styleOptionsHTMLArray = styles.map((style) => `
       <div class="style-option">
-        <input type="radio" name="style-type" value="${style.style}">
+        <input type="radio" name="style-id" value="${style.id}">
         <label>${style.style}</label>
       </div>
     `);
@@ -17,8 +17,8 @@ export const StyleOptions = async () => {
   `;
 
   const handleStyleChoice = (event) => {
-    if (event.target.name === "style-type") {
-        setStyleType(event.target.value);
+    if (event.target.name === "style-id") {
+        setStyleId(event.target.value);
     }
 };
 

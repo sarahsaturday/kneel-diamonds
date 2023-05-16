@@ -1,38 +1,39 @@
 // Set up the transient state data structure and provide initial values
 const transientState = {
-    "metalType": "",
-    "size": "",
-    "styleType": ""
+    "metalId": 0,
+    "sizeId": 0,
+    "styleId": 0
 };
 
 // Functions to modify each property of transient state
-export const setMetalType = (chosenMetal) => {
-    transientState.metalType = chosenMetal;
+export const setMetalId = (chosenMetal) => {
+    transientState.metalId = parseInt(chosenMetal);
     console.log(transientState);
 };
 
-export const setSize = (chosenSize) => {
-    transientState.size = chosenSize;
+export const setSizeId = (chosenSize) => {
+    transientState.sizeId = parseInt(chosenSize);
     console.log(transientState);
 };
 
-export const setStyleType = (chosenStyle) => {
-    transientState.styleType = chosenStyle;
+export const setStyleId = (chosenStyle) => {
+    transientState.styleId = parseInt(chosenStyle);
     console.log(transientState);
 };
 
-// Function to convert transient state to permanent state
 export const saveCustomOrder = async () => {
-    const postOptions = {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(transientState)
-    };
+  const postOptions = {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(transientState)
+  };
 
-    const response = await fetch("http://localhost:8088/orders", postOptions);
+  const response = await fetch("http://localhost:8088/orders", postOptions);
 
-    const customEvent = new CustomEvent("newOrderCreated");
-    document.dispatchEvent(customEvent);
+  const orderData = await response.json();
+  const customEvent = new CustomEvent("newOrderCreated");
+  document.dispatchEvent(customEvent);
 };
+

@@ -1,4 +1,4 @@
-import { setMetalType } from "./TransientState.js"
+import { setMetalId } from "./TransientState.js"
 
 export const MetalOptions = async () => {
     const response = await fetch("http://localhost:8088/metals");
@@ -7,7 +7,7 @@ export const MetalOptions = async () => {
     // Generate the HTML for metal options
     let metalOptionsHTMLArray = metals.map((metal) => `
       <div class="metal-option">
-        <input type="radio" name="metal-type" value="${metal.metal}">
+        <input type="radio" name="metal-id" value="${metal.id}">
         <label>${metal.metal}</label>
       </div>
     `);
@@ -19,8 +19,8 @@ export const MetalOptions = async () => {
 
     // Add event listener and handler function
     const handleMetalChoice = (event) => {
-        if (event.target.name === "metal-type") {
-            setMetalType(event.target.value);
+        if (event.target.name === "metal-id") {
+            setMetalId(event.target.value);
         }
     };
 
